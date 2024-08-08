@@ -1,0 +1,69 @@
+# 连接GitHub
+HTTPS:
+git clone https://github.com/DrYangZ/repository.git
+SSH:
+生成SSH密钥(如果没有的话)：
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+系统提示输入保存密钥文件路径:
+Enter file in which to save the key (C:\Users\asus/.ssh/id_rsa):
+按Enter键接收默认路径，接下来提示输入密码，同样也可按Enter键跳过或设置密码:
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+将生成的公钥添加到GitHub账户中(在网页操作)，并使用SSH克隆仓库:
+git clone git@github.com:DrYangZ/AOA_IndoorLocation.git
+
+# 检查SSH连接
+在克隆仓库前，可以先检查连接是否正常:
+ssh -T git@github.com
+如果连接成功，就可以看到如下输出:
+Hi DrYangZ! You've successfully authenticated, but GitHub does not provide shell access.
+
+# 进入本地项目文件夹
+cd C:\Users\asus\Desktop\WebSocket_Server
+
+# 初始化 Git 仓库
+git init
+
+# 添加远程仓库
+git remote add origin git@github.com:DrYangZ/AOA_IndoorLocation.git
+
+# 创建并切换到新分支
+git checkout -b feature-xyz
+
+# 将本地项目文件复制到克隆下来的仓库文件夹中
+xcopy /E /I "C:\path\to\your\local\project" .
+
+# 将文件添加到 Git
+git add .
+git commit -m "Add initial files to feature-xyz"
+
+# 推送新分支到远程仓库
+git push -u origin feature-xyz
+
+# 将项目文件复制到github仓库文件夹中
+cmd:
+xcopy /E /I "C:/path/to/your/local/project" .
+git bash:
+cp -r /path/to/your/local/project/* .
+
+# 删除远程分支列表
+查看远程分支列表:
+git branch -r
+删除远程分支:
+git push origin --delete branch_name
+
+# 重新添加远程仓库
+删除现有的远程仓库:
+git remote remove origin
+添加新的远程仓库:
+git remote add origin git@github.com:yourusername/newrepository.git
+验证新的远程仓库:
+git remote -v
+可以看到类似于以下的输出:
+origin  git@github.com:yourusername/newrepository.git (fetch)
+origin  git@github.com:yourusername/newrepository.git (push)
+
+# 路径分隔符
+Unix和Linux和macOS中均使用正斜杠'/'作为路径分隔符
+Windows使用反斜杠'\'作为路径分隔符
+在Git URL中必须使用正斜杠'/'作为路劲分隔符，因为Git URL遵循URI标准格式。
