@@ -72,7 +72,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Contact
 
-For any inquiries or questions, please contact [yourname@domain.com](mailto:1352135543@qq.com).
+For any inquiries or questions, please contact [1352135543@qq.com](mailto:1352135543@qq.com).
 
 ```
 
