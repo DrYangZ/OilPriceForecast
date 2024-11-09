@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+emd-signal
+statsmodels
+PyQt5
+scikit-learn
+tensorflow
+pykalman
+openpyxl
